@@ -1,31 +1,26 @@
 from tkinter import *
 
 def submit():
+
     food = []
 
     for index in listbox.curselection():
         food.insert(index,listbox.get(index))
-    print("You ordered:")
+    print("You order for:")
 
     for index in food:
         print(index)
-
+    print("has been confirmed")
 def add():
-    listbox.insert(listbox.size(),entrybox.get())
+    listbox.insert(listbox.size(),entry.get())
     listbox.config(height=listbox.size())
-
 def delete():
     listbox.delete(listbox.curselection())
     listbox.config(height=listbox.size())
 
 window = Tk()
 
-listbox = Listbox(window,
-                  font=("Times New Roman",25,"bold"),
-                  relief=RAISED,
-                  fg="Midnight blue",
-                  bg="yellow",
-                  selectmode=MULTIPLE)
+listbox = Listbox(window,bg="purple",fg="yellow",font=("Algerian",15,"bold"),selectmode=MULTIPLE)
 listbox.pack()
 
 listbox.insert(1,"Pizza")
@@ -37,17 +32,14 @@ listbox.insert(6,"Garlic bread")
 
 listbox.config(height=listbox.size())
 
-entrybox = Entry(window,
-                 font=("Times New Roman",20,"bold"),
-                 fg="midnight blue",
-                 bg="yellow")
-entrybox.pack()
+entry = Entry(window,font=("Comic Sans",10))
+entry.pack()
+
+submit_button = Button(window,text="submit",command=submit)
+submit_button.pack()
 
 add_button = Button(window,text="add",command=add)
 add_button.pack()
-
-submit_button = Button(window,text="Submit",command=submit)
-submit_button.pack()
 
 delete_button = Button(window,text="delete",command=delete)
 delete_button.pack()
