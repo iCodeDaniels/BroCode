@@ -14,7 +14,7 @@ def click():
     if messagebox.askretrycancel(title="Ask ok cancel",message="Do you want to retry?"):
         print("REQUEST GRANTED")
     else:
-        print("REJECTED")
+        print("PASS REJECTED")
 
 window = Tk()
 
