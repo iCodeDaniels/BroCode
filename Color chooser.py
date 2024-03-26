@@ -6,8 +6,11 @@ def click():
     print(color)
     colorhex = color[1]
     print(colorhex)
+    window.config(bg=colorhex)
+
 window = Tk()
 window.geometry("350x300")
+window.config(bg="blue")
 button = Button(window,text="Click me",command=click)
 button.pack()
 
