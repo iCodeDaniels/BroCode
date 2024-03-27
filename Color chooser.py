@@ -7,6 +7,7 @@ def click():
     colorhex = color[1]
     print(colorhex)
     window.config(bg=colorhex)
+    button.config(bg=colorhex)
 
 window = Tk()
 window.geometry("350x300")
