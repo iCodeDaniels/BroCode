@@ -1,24 +1,17 @@
 from tkinter import *
+from tkinter import messagebox
 
-def display():
-    if(x.get()==TRUE):
-        print("You're valid and good to go")
-    else:
-        print("Passkey Invalid")
+def proceed():
+    #messagebox.showinfo(title="Regulated Questions",message="This is a step to me becoming a great software developer")
+    #messagebox.showwarning(title="Really risky on this",message="This is really a bad choice to make")
+    messagebox.showerror(title="Error calling message",message="There's an error with the processed data")
 
 window = Tk()
 
-photo = PhotoImage(file="coder.png")
-x = BooleanVar()
+photo = PhotoImage(file='coder.png')
+window.iconphoto(True,photo)
 
-checkbox = Checkbutton(window,
-                       text="Proceed on the access",
-                       variable=x,
-                       onvalue=TRUE,
-                       offvalue=FALSE,
-                       command=display,
-                       image=photo,
-                       compound=LEFT)
-checkbox.pack()
+button = Button(window,text="Click me",command=proceed)
+button.pack()
 
 window.mainloop()
