@@ -9,9 +9,9 @@ def order():
         print("You ordered a Hamburger")
     elif(x.get()==2):
         print("You ordered Shawarma")
-    elif (x.get() == 3):
+    elif(x.get() == 3):
         print("You ordered a Kebab")
-    elif (x.get() == 4):
+    elif(x.get() == 4):
         print("You ordered Pasta")
     else:
         print("There's an invalid input")
