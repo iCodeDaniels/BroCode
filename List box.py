@@ -1,5 +1,4 @@
 from tkinter import *
-
 def submit():
 
     food = []
@@ -20,6 +19,8 @@ def delete():
 
 window = Tk()
 
+window.config(bg="purple")
+
 listbox = Listbox(window,bg="purple",fg="yellow",font=("Algerian",15,"bold"),selectmode=MULTIPLE)
 listbox.pack()
 
@@ -36,12 +37,12 @@ entry = Entry(window,font=("Comic Sans",10))
 entry.pack()
 
 submit_button = Button(window,text="submit",command=submit)
-submit_button.pack()
+submit_button.place(x=60,y=165)
 
 add_button = Button(window,text="add",command=add)
-add_button.pack()
+add_button.place(x=130,y=165)
 
 delete_button = Button(window,text="delete",command=delete)
-delete_button.pack()
+delete_button.place(x=185,y=165)
 
 window.mainloop()
