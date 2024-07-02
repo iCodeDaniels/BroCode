@@ -22,6 +22,10 @@ def delete():
 
 window = Tk()
 
+window.title("ROYAL TASTE DINE & WINE")
+icon = PhotoImage(file='coder.png')
+window.iconphoto(True,icon)
+
 frame = Frame(window,bd=5,relief=SUNKEN)
 frame.pack(side=TOP)
 
